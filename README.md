@@ -2,8 +2,7 @@ update~
 ### ✨ 新功能 (Features)
 -源码来自于https://github.com/prinsss/twitter-web-exporter
 -以下是本次更新：
-- 增强表格全选功能 ：重构了数据表格的表头选择器。现在将鼠标悬停在全选复选框上会弹出一个下拉菜单，支持「全选所有页 (Select All Pages)」、「仅选中当前页 (Select Current Page)」以及「清除选中 (Clear Selection)」。
-- 优化默认选中策略 ：打开数据面板时，默认不再强制选中全部数据库里的数据，而是仅默认「选中当前页」的数据，避免误操作导致导出过载。
+
 - 动态页码显示 ：重构了底部分页组件 ( pagination ) 的页码输入框逻辑，将其改为双向绑定。现在点击左右箭头翻页时，页码输入框中的数字会实时动态更新，方便用户明确当前所处页数。
 - 优化导出文件命名 ：导出数据 (JSON/CSV/HTML) 和导出媒体资源 (Zip) 时，导出的文件名由原来的时间戳后缀改为了直观的「当前页码」后缀（例如： twitter-Bookmarks-1.json 、 twitter-Bookmarks-1-media.zip ），更利于文件整理。
 ### 🐛 问题修复 (Bug Fixes)
