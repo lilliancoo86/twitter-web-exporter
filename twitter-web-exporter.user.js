@@ -2875,8 +2875,8 @@
     const [showExportDataModal, toggleShowExportDataModal] = useToggle();
     hooks.useEffect(() => {
       setTimeout(() => {
-        if (!table.getIsSomeRowsSelected() && !table.getIsAllRowsSelected()) {
-          table.toggleAllPageRowsSelected(true);
+        if (!table.getIsSomeRowsSelected()) {
+          table.toggleAllRowsSelected(true);
         }
       }, 100);
     }, [table]);
@@ -2953,22 +2953,16 @@
     columnHelper$2.display({
       id: "select",
       meta: { exportable: false },
-      header: ({ table }) => /* @__PURE__ */ u("div", { class: "dropdown dropdown-hover dropdown-right dropdown-end", children: [
-        /* @__PURE__ */ u("label", { tabindex: 0, class: "cursor-pointer flex items-center justify-center p-0 w-8 h-8", children: /* @__PURE__ */ u(
-          "input",
-          {
-            type: "checkbox",
-            class: "checkbox checkbox-sm align-middle",
-            checked: table.getIsAllPageRowsSelected() || table.getIsAllRowsSelected(),
-            indeterminate: table.getIsSomePageRowsSelected() || table.getIsSomeRowsSelected(),
-            onChange: table.getToggleAllPageRowsSelectedHandler()
-          }
-        ) }),
-        /* @__PURE__ */ u("ul", { tabindex: 0, class: "dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 text-xs", children: [
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select All Pages" }) }) }),
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllPageRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select Current Page" }) }) })
-        ] })
-      ] }),
+      header: ({ table }) => /* @__PURE__ */ u(
+        "input",
+        {
+          type: "checkbox",
+          class: "checkbox checkbox-sm align-middle",
+          checked: table.getIsAllRowsSelected(),
+          indeterminate: table.getIsSomeRowsSelected(),
+          onChange: table.getToggleAllRowsSelectedHandler()
+        }
+      ),
       cell: ({ row }) => /* @__PURE__ */ u(
         "input",
         {
@@ -3269,22 +3263,16 @@
     columnHelper$1.display({
       id: "select",
       meta: { exportable: false },
-      header: ({ table }) => /* @__PURE__ */ u("div", { class: "dropdown dropdown-hover dropdown-right dropdown-end", children: [
-        /* @__PURE__ */ u("label", { tabindex: 0, class: "cursor-pointer flex items-center justify-center p-0 w-8 h-8", children: /* @__PURE__ */ u(
-          "input",
-          {
-            type: "checkbox",
-            class: "checkbox checkbox-sm align-middle",
-            checked: table.getIsAllPageRowsSelected() || table.getIsAllRowsSelected(),
-            indeterminate: table.getIsSomePageRowsSelected() || table.getIsSomeRowsSelected(),
-            onChange: table.getToggleAllPageRowsSelectedHandler()
-          }
-        ) }),
-        /* @__PURE__ */ u("ul", { tabindex: 0, class: "dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 text-xs", children: [
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select All Pages" }) }) }),
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllPageRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select Current Page" }) }) })
-        ] })
-      ] }),
+      header: ({ table }) => /* @__PURE__ */ u(
+        "input",
+        {
+          type: "checkbox",
+          class: "checkbox checkbox-sm align-middle",
+          checked: table.getIsAllRowsSelected(),
+          indeterminate: table.getIsSomeRowsSelected(),
+          onChange: table.getToggleAllRowsSelectedHandler()
+        }
+      ),
       cell: ({ row }) => /* @__PURE__ */ u(
         "input",
         {
@@ -3736,22 +3724,16 @@
     columnHelper.display({
       id: "select",
       meta: { exportable: false },
-      header: ({ table }) => /* @__PURE__ */ u("div", { class: "dropdown dropdown-hover dropdown-right dropdown-end", children: [
-        /* @__PURE__ */ u("label", { tabindex: 0, class: "cursor-pointer flex items-center justify-center p-0 w-8 h-8", children: /* @__PURE__ */ u(
-          "input",
-          {
-            type: "checkbox",
-            class: "checkbox checkbox-sm align-middle",
-            checked: table.getIsAllPageRowsSelected() || table.getIsAllRowsSelected(),
-            indeterminate: table.getIsSomePageRowsSelected() || table.getIsSomeRowsSelected(),
-            onChange: table.getToggleAllPageRowsSelectedHandler()
-          }
-        ) }),
-        /* @__PURE__ */ u("ul", { tabindex: 0, class: "dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 text-xs", children: [
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select All Pages" }) }) }),
-          /* @__PURE__ */ u("li", { children: /* @__PURE__ */ u("a", { onClick: () => table.toggleAllPageRowsSelected(true), children: /* @__PURE__ */ u(Trans, { i18nKey: "Select Current Page" }) }) })
-        ] })
-      ] }),
+      header: ({ table }) => /* @__PURE__ */ u(
+        "input",
+        {
+          type: "checkbox",
+          class: "checkbox checkbox-sm align-middle",
+          checked: table.getIsAllRowsSelected(),
+          indeterminate: table.getIsSomeRowsSelected(),
+          onChange: table.getToggleAllRowsSelectedHandler()
+        }
+      ),
       cell: ({ row }) => /* @__PURE__ */ u(
         "input",
         {
